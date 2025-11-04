@@ -23,7 +23,7 @@
   └── README.md
 ```
 # Dataset
-**Source from: BBC/take-away-englis**  
+**Source from: BBC/take-away-english**  
 BBC1, BBC2, BBC3: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-251020  
 BBC4, BBC5, BBC6: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250210  
 BBC7, BBC10, BBC11: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-240805  
