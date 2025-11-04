@@ -22,3 +22,9 @@
   │  
   └── README.md
 ```
+
+# Text Similarity Project (Stage 1–2)
+
+This project implements **Shingling** and **Jaccard similarity** for document similarity detection.  
+k = 10  # shingle length  
+sim_threshold = 0.5 # similarity threshold  
