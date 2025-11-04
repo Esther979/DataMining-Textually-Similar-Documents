@@ -23,7 +23,11 @@
   └── README.md
 ```
 # Dataset
-Source from: BBC/take-away-english
+**Source from: BBC/take-away-englis**  
+BBC1, BBC2, BBC3: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-251020  
+BBC4, BBC5, BBC6: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250210  
+BBC7, BBC10, BBC11: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-240805  
+BBC8, BBC9, BBC12: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250728  
 
 # Text Similarity Project (Stage 1–2)
 
