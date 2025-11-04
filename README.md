@@ -22,3 +22,7 @@
   │  
   └── README.md
 ```
+
+# Text Similarity Project (Stage 1–2)
+
+This project implements **Shingling** and **Jaccard similarity** for document similarity detection.
