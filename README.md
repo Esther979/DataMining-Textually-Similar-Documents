@@ -22,6 +22,8 @@
   │  
   └── README.md
 ```
+# Dataset
+Source from: BBC/take-away-english
 
 # Text Similarity Project (Stage 1–2)
 
