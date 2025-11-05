@@ -7,7 +7,8 @@ class Shingling:
     Each shingle is hashed into an integer for compact representation.
     """
 
-    def __init__(self, k=10, lowercase=True, alnum_only=False):
+    """Pre-process"""
+    def __init__(self, k=10, lowercase=True, alnum_only=True):
         self.k = k
         self.lowercase = lowercase
         self.alnum_only = alnum_only
@@ -33,8 +34,9 @@ class Shingling:
         if len(text) < self.k:
             return {self._hash_shingle(text)} if text else set()
 
+        """Sliding window of k-length"""
         shingles = set()
-        for i in range(len(text) - self.k + 1):
+        for i in range(len(text) - self.k + 1): 
             shingle = text[i:i+self.k]
             shingles.add(self._hash_shingle(shingle))
         return shingles

@@ -29,6 +29,9 @@ BBC4, BBC5, BBC6: https://www.bbc.co.uk/learningenglish/chinese/features/take-aw
 BBC7, BBC10, BBC11: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-240805  
 BBC8, BBC9, BBC12: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250728  
 
+# Dataset
+Source from: BBC/take-away-english
+
 # Text Similarity Project (Stage 1–2)
 
 This project implements **Shingling** and **Jaccard similarity** for document similarity detection.  
