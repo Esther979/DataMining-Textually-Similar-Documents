@@ -1,6 +1,8 @@
 class CompareSets:
     """
     Compute Jaccard similarity between two sets of hashed shingles.
+    input: set_a, set_b
+    Jaccard = intersection / union (within [0.0, 1.0])
     """
 
     @staticmethod
