@@ -27,7 +27,7 @@ def main():
     # Step 1: Compute shingles
     shingle_sets = {}
     for name, text in docs.items():
-        shingle_sets[name] = shingler.create_shingles(text)
+        shingle_sets[name] = shingler.create_shingles(text) # Pass to Minhasing
         print(f"📄 {name}: {len(shingle_sets[name])} unique shingles")
 
     # Step 2: Compute pairwise Jaccard similarities
