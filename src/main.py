@@ -75,43 +75,6 @@ def main():
             tag = "✅ Similar" if sim_true >= sim_threshold else "❌ Different"
             print(f"{d1} vs {d2}: MinHash≈{sim_hat:.4f}, Jaccard={sim_true:.4f} → {tag}")
 
-#性能比较
-    import itertools
-
-    print("\n=== Performance Summary ===")
-    t1 = time.time()
-    all_pairs = list(itertools.combinations(doc_names, 2))
-    for d1, d2 in all_pairs:
-        _ = CompareSignatures.similarity(
-            signatures[doc_names.index(d1)],
-            signatures[doc_names.index(d2)]
-        )
-    t2 = time.time()
-    all_time = t2 - t1
-    all_count = len(all_pairs)
-
-    
-    t3 = time.time()
-    for (i, j) in cand_pairs:
-        _ = CompareSignatures.similarity(signatures[i], signatures[j])
-    t4 = time.time()
-    lsh_time = t4 - t3
-    lsh_count = len(cand_pairs)
-
-    # 输出结果
-    if lsh_count == 0:
-        print("⚠️ No candidates found by LSH.")
-    else:
-        print(f"All-pairs comparisons: {all_count} pairs, time = {all_time:.4f}s")
-        print(f"LSH comparisons: {lsh_count} pairs, time = {lsh_time:.4f}s")
-        if lsh_time > 0:
-            print(f"Speedup ≈ {all_time / lsh_time:.1f}×")
-
-
-    # Optional timing
-    t0 = time.time()
-    _ = [compare.jaccard_similarity(a, b) for a in shingle_sets.values() for b in shingle_sets.values()]
-    print(f"\n⏱️ Total processing time: {time.time() - t0:.3f}s")
 
 # Test Performance
     print("\n=== Scalability Evaluation ===")
