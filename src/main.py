@@ -113,7 +113,40 @@ def main():
     _ = [compare.jaccard_similarity(a, b) for a in shingle_sets.values() for b in shingle_sets.values()]
     print(f"\n⏱️ Total processing time: {time.time() - t0:.3f}s")
 
- 
+# Test Performance
+    print("\n=== Scalability Evaluation ===")
+    sizes = list(range(5, len(docs) + 1))  # test with 5 up to N documents
+
+    results = []  # (num_docs, jaccard_time, minhash_time)
+
+    for size in sizes:
+        subset = doc_names[:size]
+        subset_shingles = {d: shingle_sets[d] for d in subset}
+
+        # Measure Jaccard all-pairs time
+        t_start = time.time()
+        for i in range(len(subset)):
+            for j in range(i + 1, len(subset)):
+                CompareSets.jaccard_similarity(
+                    subset_shingles[subset[i]],
+                    subset_shingles[subset[j]]
+                )
+        t_jacc = time.time() - t_start
+
+        # Measure MinHash + LSH time
+        t_start = time.time()
+        subset_sigs = [signatures[doc_names.index(d)] for d in subset]
+        _ = lsh.candidate_pairs(subset_sigs)   # only generates candidate pairs
+        t_minhash = time.time() - t_start
+
+        results.append((size, t_jacc, t_minhash))
+
+    # Print result table
+    print("\nDocuments | Jaccard Time (s) | MinHash+LSH Time (s)")
+    print("-" * 45)
+    for size, t_j, t_m in results:
+        print(f"{size:<10} | {t_j:<17.4f} | {t_m:<.4f}")
+
 
 if __name__ == "__main__":
     main()
