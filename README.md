@@ -30,7 +30,7 @@ BBC7, BBC10, BBC11: https://www.bbc.co.uk/learningenglish/chinese/features/take-
 BBC8, BBC9, BBC12: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250728  
 
 # Running
-`cd src`
+`cd src`  
 `python main.py`
 
 # Text Similarity Project
