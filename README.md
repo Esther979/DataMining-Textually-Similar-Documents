@@ -41,6 +41,6 @@ similarity threshold: sim_threshold = 0.5
 **Step 3-4:**  
 Implement **Minhash** and **LSH** to approximate Jaccard similarity more efficiently and efficiently identify likely similar document pairs without comparing all pairs.  
 Similarity threshold = 0.5  
-**Evaluation**  
+**Evaluation:**  
 Compare the performance between Jaccard similarity and candidate pairs.   
 The result shows that: As the number of documents increases, the Jaccard time significantly increases, but the MinHash + LSH time remains stable. This confirms that MinHash + LSH is more suitable for large datasets.  
