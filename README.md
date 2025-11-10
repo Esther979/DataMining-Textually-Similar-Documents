@@ -29,8 +29,14 @@ BBC4, BBC5, BBC6: https://www.bbc.co.uk/learningenglish/chinese/features/take-aw
 BBC7, BBC10, BBC11: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-240805  
 BBC8, BBC9, BBC12: https://www.bbc.co.uk/learningenglish/chinese/features/take-away-english/ep-250728  
 
-# Text Similarity Project (Stage 1–2)
-
+# Text Similarity Project
+**Step 1-2:**
 This project implements **Shingling** and **Jaccard similarity** for document similarity detection.  
 k = 10  # shingle length  
 sim_threshold = 0.5 # similarity threshold  
+**Step 3-4:**
+Implement **Minhash** and **LSH** to approximate Jaccard similarity more efficiently and efficiently identify likely similar document pairs without comparing all pairs.
+Similarity threshold t = 0.5
+**Evaluation**
+Compare the performance between Jaccard similarity and candidate pairs. 
+The result shows that: As the number of documents increases, the Jaccard time significantly increases, but the MinHash + LSH time remains stable. This confirms that MinHash + LSH is more suitable for large datasets.
